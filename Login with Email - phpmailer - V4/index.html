@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="header-form">
+            <div class="login-btn active" onclick="toggleForm('login')">login</div>
+            <div class="sign-in-btn" onclick="toggleForm('signup')">sign in</div>
+        </div>        
+        <div class="form-content login-form active">
+            <h2>log in</h2>
+            <form action="#" method="POST">
+                <input type="email" placeholder="email" required name="" autofocus >
+                <input type="password" placeholder="password" required name="" autofocus min="4" >
+                <button required name="" autofocus >send</button>
+            </form>
+            <p>هل نسيت كلمة المرور؟ <a href="forgot_password.php">اضغط هنا</a></p>
+        </div>
+        <div class="form-content sign-in-form">
+            <h2>sign in</h2>
+            <form action="register_process.php" method="POST">
+                <input type="text" placeholder="name" required name="username" autofocus >
+                <input type="email" placeholder="email" required name="email" autofocus >
+                <input type="password" placeholder="password" required name="password" autofocus min="4" >
+                <button required name="" autofocus >send</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function toggleForm(formType) {
+            const loginBtn = document.querySelector('.login-btn');
+            const signupBtn = document.querySelector('.sign-in-btn');
+            const loginForm = document.querySelector('.login-form');
+            const signupForm = document.querySelector('.sign-in-form');
+
+            if (formType === 'login') {
+                loginBtn.classList.add('active');
+                signupBtn.classList.remove('active');
+                loginForm.classList.add('active');
+                signupForm.classList.remove('active');
+            } else if (formType === 'signup') {
+                loginBtn.classList.remove('active');
+                signupBtn.classList.add('active');
+                loginForm.classList.remove('active');
+                signupForm.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+:root {
+  /***************  root sitting  **************/
+      --primary-color: #ff9900; /* لون أساسي */
+      --black-color: #222; /* لون أساسي */
+      --secondary-color: rgb(237, 237, 242); /* لون ثانوي */
+      --font-family: Arial, sans-serif; /* نوع الخط الأساسي */
+      --heading-font-family: "Roboto", sans-serif; /* نوع الخط لعناوين الصفحة */
+      --border: solid 2px #29b3bda8; /*   الحواف */
+      --box-news-shadow: 0 3px 2px hwb(0 0% 100% / 0.2); /* ظل المربع */
+      --transition-duration: 0.3s; /* مدة الانتقال */
+      
+      --main-heading-size: 24px; /* حجم العنوان الرئيسي */
+      --sub-heading-size: 18px; /* حجم العنوان الفرعي */
+      --paragraph-size: 16px; /* حجم الفقرة */
+      
+      --background-color-1: #F8F9F9; /* لون الخلفية 2 */
+      --background-color-2: #88b8bb9c; /* لون الخلفية 1 */
+      --background-color-3: #D4E6F1; /* لون الخلفية 1 */
+      --background-color-4: #7ac400; /* لون الخلفية 3 */
+      --background-color-5: #FCE4EC; /* لون الخلفية 3 */
+      --background-color-6: #4b4747; /* لون الخلفية 3 */
+      --box-news-shadow: 0px 1px 6px #ff6600; /* لون ظل المربع */
+      }
+  /***************  css coder  **************/
+  *{
+      margin: 0;
+      padding: 0;
+  }
+  body{
+      background-color: var(--background-color-3);
+      font-family:var(--font-family) ;
+  }
+
+  .form-container {
+      max-width: 400px;
+      margin: 50px auto;
+      background-color: var(--background-color-1);
+      padding: 20px;
+      box-shadow: var(box-shadow);
+      border-radius: 5px;
+      text-align: center;
+  }
+
+  .header-form {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+
+  }
+
+  .header-form div {
+      width: 48%;
+      text-align: center;
+      padding: 10px;
+      background-color: var(--background-color-1);
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.8s;
+  }
+
+  .header-form div:hover {
+      background-color: var(--background-color-3);
+  }
+
+  .header-form div.active {
+      background-color: var(--background-color-1);
+      border: var(--border);
+  }
+
+  .form-content {
+      display: none;
+  }
+
+  .form-content.active {
+      display: block;
+      animation: fadeIn 0.8s ease;
+  }
+
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+  .login-form form{
+      background-color: var(--background-color-1);
+      padding: 10px;
+      width: 90%;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      border-radius: 10px;
+  }
+
+  .login-form form input{
+      background-color: var(--background-color-1);
+      border: var(--border);
+      outline: none;
+      margin-top: 5px;
+      border-radius: 7px;
+      padding: 5px 10px;
+      color: var(--black-color);
+      width: 80%;
+      flex-grow: 1;
+  }
+
+  .login-form form button{
+      background-color: var(--background-color-4);
+      color: var(--secondary-color);
+      border: none;
+      border-radius: 10px;
+      padding: 5px 10px;
+      cursor:pointer;
+      flex-grow: 1;
+  }
+
+  .login-form form input:hover{
+      border: var(--border);
+      font-weight: bold;
+      font-size: var(--paragraph-size);
+      box-shadow: var(--box-news-shadow);
+  }
+  .login-form form button:hover{
+      border: var(--border);
+      font-weight: bold;
+      font-size: var(--paragraph-size);
+  }
+  .sign-in-form form{
+      background-color: var(--background-color-1);
+      padding: 10px;
+      width: 95%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      border-radius: 10px;
+  }
+
+  .sign-in-form form input{
+      background-color: var(--background-color-1);
+      border: var(--border);
+      outline: none;
+      margin-top: 5px;
+      border-radius: 7px;
+      padding: 5px 10px;
+      color: var(--black-color);
+      width: 80%;
+      flex-grow: 1;
+  }
+
+  .sign-in-form form button{
+      background-color: var(--background-color-4);
+      color: var(--secondary-color);
+      border: none;
+      border-radius: 10px;
+      padding: 5px 10px;
+      cursor:pointer;
+      flex-grow: 1;
+  }
+
+  .sign-in-form form input:hover{
+      border: var(--border);
+      font-weight: bold;
+      font-size: var(--paragraph-size);
+      box-shadow: var(--box-news-shadow);
+  }
+  .sign-in-form form button:hover{
+      border: var(--border);
+      font-weight: bold;
+      font-size: var(--paragraph-size);
+  }
