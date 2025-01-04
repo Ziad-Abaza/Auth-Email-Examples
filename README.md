@@ -68,5 +68,3 @@ Feel free to contribute by:
 This repository is licensed under the [MIT License](LICENSE).
 
 ---
-
-إذا أردت إضافة قسم آخر أو تعديل على هذا النص، أخبرني وسأقوم بتحديثه بما يناسبك! 😊
